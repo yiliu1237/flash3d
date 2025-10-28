@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cmd //c \"\"\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\Tools\\VsDevCmd.bat\"\" && set CUDA_HOME=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.6 && pip install git+https://github.com/eldar/diff-gaussian-rasterization-w-pose@main\")",
+      "Bash(pip uninstall:*)",
+      "Bash(pip install:*)",
+      "Bash(set \"PATH=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.6\\bin;%PATH%\")",
+      "Bash(set \"CUDA_HOME=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.6\")",
+      "Bash(set \"CUDA_PATH=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.6\")",
+      "Bash(set \"TORCH_CUDA_ARCH_LIST=8.9\")",
+      "Bash(python -m pip install:*)",
+      "Bash(nvcc:*)",
+      "Bash(dir \"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.6\\bin\\nvcc.exe\")",
+      "Bash(\"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.6\\bin\\nvcc.exe\" --version)",
+      "Bash(set:*)",
+      "Bash(cmd /c \"set CUDA_HOME=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.6 && set PATH=C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.6\\bin;%PATH% && python -m pip install git+https://github.com/eldar/diff-gaussian-rasterization-w-pose@main\")",
+      "Bash(export CUDA_HOME=\"/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6\")",
+      "Bash(export PATH=\"/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin:$PATH\")",
+      "Bash(export CUDA_HOME=\"C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6\")",
+      "Bash(echo:*)",
+      "Bash(python -c:*)",
+      "Bash(./install_diff_gauss.bat)",
+      "Bash(cmd /c install_diff_gauss.bat)",
+      "Bash(install_diff_gauss.bat)",
+      "Bash(export DISTUTILS_USE_SDK=1)",
+      "Bash(export MSSdk=1)",
+      "Bash(export TORCH_CUDA_ARCH_LIST:*)",
+      "Bash(git clone:*)",
+      "Bash(git submodule update:*)",
+      "Bash(python build_cuda.py:*)",
+      "Read(//c/Users/thero/OneDrive/Documents/GitHub/**)",
+      "Bash(pip show:*)",
+      "Bash(conda activate flash3d)",
+      "Bash(python:*)",
+      "Bash(curl:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -37,6 +37,7 @@ def extract_tar(fn, unzip_dir):
     logging.info(f"Unpacking {fn} to {unzip_dir} ...")
     tf = tarfile.open(fn)
     tf.extractall(unzip_dir, filter='fully_trusted')
+    tf.close()  # Close the tarfile before deleting
     logging.info(f"Finished unpacking.")
     fn.unlink()
     logging.info(f"Deleted {str(fn)}.")

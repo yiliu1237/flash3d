@@ -25,11 +25,11 @@
 Flash3D has been trained and tested with the followings software versions:
 
 - Python 3.10
-- Pytorch 2.2.2
-- CUDA 11.8
-- GCC 11.2 (or more recent)
+- Pytorch 2.8.0
+- CUDA 12.6
+- GCC 11.2 (or more recent) / MSVC 14.4+ (Windows)
 
-Begin by installing CUDA 11.8 and adding the path containing the `nvcc` compiler to the `PATH` environmental variable.
+Begin by installing CUDA 12.6 and adding the path containing the `nvcc` compiler to the `PATH` environmental variable.
 Then the python environment can be created either via conda:
 
 ```sh
@@ -47,7 +47,7 @@ python3.10 -m venv .venv
 Finally, install the required packages as follows:
 
 ```sh
-pip install -r requirements-torch.txt --extra-index-url https://download.pytorch.org/whl/cu118
+pip install -r requirements-torch.txt --extra-index-url https://download.pytorch.org/whl/cu126
 pip install -r requirements.txt
 ```
 

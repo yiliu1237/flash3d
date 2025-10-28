@@ -57,7 +57,11 @@ class UniDepthExtended(nn.Module):
         else:
             with torch.no_grad():
                 intrinsics = inputs[("K_src", 0)] if ("K_src", 0) in inputs.keys() else None
-                depth_outs = self.unidepth.infer(inputs["color_aug", 0, 0], intrinsics=intrinsics)
+                # UniDepthV2 doesn't accept intrinsics parameter
+                if self.cfg.model.depth.version == "v2":
+                    depth_outs = self.unidepth.infer(inputs["color_aug", 0, 0])
+                else:
+                    depth_outs = self.unidepth.infer(inputs["color_aug", 0, 0], intrinsics=intrinsics)
         outputs_gauss = {}
 
         outputs_gauss[("K_src", 0)] = inputs[("K_src", 0)] if ("K_src", 0) in inputs.keys() else depth_outs["intrinsics"]
